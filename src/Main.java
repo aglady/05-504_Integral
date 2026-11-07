@@ -1,4 +1,5 @@
 import ru.gr05504.application.CalculationService;
+import ru.gr05504.application.CommandHistory;
 import ru.gr05504.infrastructure.Exp4jFormulaParser;
 import ru.gr05504.infrastructure.InMemoryCalculationRepository;
 import ru.gr05504.ui.CalculatorWindow;
@@ -8,5 +9,6 @@ void main() {
             new InMemoryCalculationRepository(),
             new Exp4jFormulaParser()
     );
-    new CalculatorWindow(service).setVisible(true);
+    CommandHistory history = new CommandHistory();
+    new CalculatorWindow(service, history).setVisible(true);
 }
