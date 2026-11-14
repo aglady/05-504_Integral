@@ -92,7 +92,8 @@ public class CalculatorWindow extends JFrame implements CalculatorView {
                 + "; " + String.format("%.4f", c.getUpper()) + "]"
                 + " | " + c.getMethod()
                 + " | n = " + c.getIntervals()
-                + " | I = " + String.format("%.8f", c.getResult());
+                + " | I = " + String.format("%.8f", c.getResult())
+                + " | T = " + c.getElapsedNanoTime() + " нс";
     }
 
     @Override public String getFormula()            { return formulaField.getText(); }
